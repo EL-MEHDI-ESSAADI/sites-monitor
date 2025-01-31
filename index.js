@@ -92,7 +92,11 @@ async function monitorSites() {
     }
 
     // Wait for the specified interval
-    console.log("Waiting for ", checkInterval, " seconds to check again");
+    console.log(
+      "Waiting for ",
+      checkInterval / 1000,
+      " seconds to check again"
+    );
     await new Promise((resolve) => setTimeout(resolve, checkInterval));
     console.log("------------------------------------------------------------");
   }
